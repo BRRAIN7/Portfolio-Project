@@ -88,7 +88,7 @@ const initialNodes = [
 const initialEdges = [
   { id: 'e-incubators', source: 'center', target: 'incubators', sourceHandle: 't', animated: true, style: { stroke: 'var(--accent-sage)', strokeWidth: 2 } },
   { id: 'e-startups', source: 'center', target: 'startups', sourceHandle: 'r', animated: true, style: { stroke: 'var(--accent-blue)', strokeWidth: 2 } },
-  { id: 'e-industry', source: 'center', target: 'industry', sourceHandle: 'r', animated: true, style: { stroke: 'var(--bg-navy)', strokeWidth: 2 } },
+  { id: 'e-industry', source: 'center', target: 'industry', sourceHandle: 'r', animated: true, style: { stroke: 'var(--accent-cyan)', strokeWidth: 2 } },
   { id: 'e-students', source: 'center', target: 'students', sourceHandle: 'l', animated: true, style: { stroke: 'var(--accent-sage)', strokeWidth: 2 } },
   { id: 'e-research', source: 'center', target: 'research', sourceHandle: 'l', animated: true, style: { stroke: 'var(--accent-blue)', strokeWidth: 2 } },
   { id: 'e-epic', source: 'center', target: 'epic', sourceHandle: 'b', animated: true, style: { stroke: 'var(--accent-cyan)', strokeWidth: 2 } },

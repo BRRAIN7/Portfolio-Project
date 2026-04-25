@@ -74,7 +74,7 @@
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 1rem;
-  color: var(--bg-navy);
+  color: var(--bg-white);
 }
 
 .status-dot {

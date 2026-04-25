@@ -75,7 +75,7 @@ const Chatbot = () => {
             <Bot size={20} color="var(--bg-navy)" />
             <div className="chatbot-header-info">
               <span className="chatbot-name">Ask Prof. Bhavna</span>
-              <span className="chatbot-status">Online</span>
+              <span className="chatbot-status"> Online</span>
             </div>
           </div>
           <button className="close-btn" onClick={() => setIsOpen(false)}>
