@@ -1,0 +1,119 @@
+.initiatives {
+  background: var(--bg-primary);
+  padding-bottom: 6rem;
+}
+
+.initiatives-header {
+  margin-bottom: 4rem;
+}
+
+.initiatives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem; /* Huge editorial spacing */
+}
+
+.initiative-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Alternate layout */
+.initiative-card:nth-child(even) {
+  grid-template-columns: 1fr 1fr;
+}
+.initiative-card:nth-child(even) .initiative-image-wrapper {
+  order: 2;
+}
+.initiative-card:nth-child(even) .initiative-content {
+  order: 1;
+}
+
+.initiative-image-wrapper {
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(10, 17, 40, 0.08);
+}
+
+.initiative-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.initiative-card:hover .initiative-image {
+  transform: scale(1.03);
+}
+
+/* Use the new images */
+.project-img-1 { background-image: url('/images/dt_industry.png'); }
+.project-img-2 { background-image: url('/images/dt_workshop.png'); }
+.project-img-3 { background-image: url('/images/dt_mentorship.png'); }
+
+.initiative-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.initiative-category {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-coral);
+  margin-bottom: 1.5rem;
+}
+
+.initiative-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.initiative-desc {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  color: var(--bg-navy);
+  transition: var(--transition);
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+.btn-link:hover {
+  gap: 1.2rem;
+  color: var(--accent-coral);
+  border-bottom-color: var(--accent-coral);
+}
+
+@media (max-width: 992px) {
+  .initiative-card, .initiative-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .initiative-card:nth-child(even) .initiative-image-wrapper {
+    order: 0;
+  }
+  .initiative-card:nth-child(even) .initiative-content {
+    order: 0;
+  }
+}
