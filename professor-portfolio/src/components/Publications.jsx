@@ -1,32 +1,59 @@
 import React from 'react';
-import { BookOpen, FileText, Award } from 'lucide-react';
+import { BookOpen, FileText, Award, Cpu } from 'lucide-react';
 import './Publications.css';
 
 const Publications = () => {
   const items = [
     {
-      type: "Research Paper",
-      icon: <FileText size={24} />,
-      title: "Optimization of Handover Delay During Authentication",
-      publisher: "Research in Next Generation Networks and Mobility Management",
-      year: "2019",
-      description: "Research focused on reducing authentication delays and improving seamless mobility performance in next generation communication networks."
-    },
-    {
-      type: "Patent",
+      type: "Patent / Copyright",
       icon: <Award size={24} />,
-      title: "Method and System for Reducing Delay for Authentication During Handover in Next Generation Networks",
-      publisher: "Innovation Contribution / Patent",
-      year: "2021",
-      description: "Patent contribution addressing optimization of authentication handover mechanisms in next generation communication systems."
+      title: "Rehabilitation Skates"
     },
     {
-      type: "Thought Leadership",
+      type: "Patent / Copyright",
+      icon: <Award size={24} />,
+      title: "IOT-Based System, Device, and Method for Automating and Customizing Cooking Process Remotely"
+    },
+    {
+      type: "Patent / Copyright",
+      icon: <Award size={24} />,
+      title: "Personal Assistant Robot"
+    },
+    {
+      type: "Patent / Copyright",
+      icon: <Award size={24} />,
+      title: "Person Learning Recognition using Machine Learning"
+    },
+    {
+      type: "Patent / Copyright",
+      icon: <Award size={24} />,
+      title: "Smart Inventory Management System"
+    },
+    {
+      type: "Patent / Copyright",
+      icon: <Award size={24} />,
+      title: "Response Analyzer of Sensory Motor Interaction (RASMI)"
+    },
+    {
+      type: "Patent / Copyright",
+      icon: <Award size={24} />,
+      title: "Dental Cavity Detection System using Ultrasonic and Infrared sensor"
+    },
+    {
+      type: "Patent / Copyright",
+      icon: <Award size={24} />,
+      title: "A Wearable and Vigilantly Attentive Gadget for Emissions from ICT Appliances"
+    },
+    {
+      type: "Patent / Copyright",
+      icon: <Award size={24} />,
+      title: "Method and system for reducing delay for authentication during handover in next generation networks"
+    },
+    {
+      type: "Published Book",
       icon: <BookOpen size={24} />,
-      title: "The Role of Education in Fostering Entrepreneurship and Innovation",
-      publisher: "Innovation and Entrepreneurship Research",
-      year: "2023",
-      description: "Research contribution exploring how education can foster entrepreneurial thinking, innovation ecosystems and student-driven innovation."
+      title: "Faculty Resource Guide for the subject “Computer Networks”",
+      publisher: "Wipro Technologies, Bangalore"
     }
   ];
 
@@ -39,9 +66,8 @@ const Publications = () => {
             Research & <span className="text-gradient">Publications</span>
           </h2>
           <div className="research-metrics" style={{ display: 'flex', gap: '2rem', marginTop: '1rem', color: 'var(--text-secondary)' }}>
-            <span><strong>21+</strong> Publications</span>
-            <span><strong>75+</strong> Citations</span>
-            <span><strong>1+</strong> Patent Contribution</span>
+            <span><strong>9</strong> Patents / Copyrights</span>
+            <span><strong>1</strong> Published Book</span>
           </div>
         </div>
 
@@ -54,11 +80,13 @@ const Publications = () => {
               <div className="pub-content">
                 <span className="pub-type">{item.type}</span>
                 <h3 className="pub-title">{item.title}</h3>
-                <div className="pub-meta">
-                  <span className="pub-publisher">{item.publisher}</span>
-                  <span className="pub-year">{item.year}</span>
-                </div>
-                <p className="pub-desc">{item.description}</p>
+                {(item.publisher || item.year) && (
+                  <div className="pub-meta">
+                    {item.publisher && <span className="pub-publisher">{item.publisher}</span>}
+                    {item.year && <span className="pub-year">{item.year}</span>}
+                  </div>
+                )}
+                {item.description && <p className="pub-desc">{item.description}</p>}
               </div>
             </div>
           ))}

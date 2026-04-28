@@ -1,0 +1,130 @@
+.admin-profiles {
+  padding: 6rem 0;
+  background-color: var(--bg-navy);
+}
+
+.admin-header {
+  margin-bottom: 4rem;
+}
+
+.admin-tabs-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.admin-tabs-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.admin-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-tab-btn:hover {
+  background-color: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+
+.admin-tab-btn.active {
+  background-color: rgba(67, 97, 238, 0.1);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.admin-tabs-content {
+  flex-grow: 1;
+  background-color: var(--bg-surface);
+  border-radius: 16px;
+  padding: 2.5rem;
+  min-height: 400px;
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.role-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--bg-primary);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: transform 0.2s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.role-icon {
+  color: var(--accent-sage);
+  margin-top: 2px;
+}
+
+.role-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.role-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.role-duration {
+  font-size: 0.8rem;
+  color: var(--accent-coral);
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .admin-tabs-container {
+    flex-direction: column;
+  }
+  
+  .admin-tabs-nav {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .admin-tab-btn {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-tab-btn {
+    flex: 1 1 100%;
+  }
+  
+  .admin-tabs-content {
+    padding: 1.5rem;
+  }
+}

@@ -4,14 +4,15 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Impact from './components/Impact';
 import Expertise from './components/Expertise';
-import FeaturedInitiatives from './components/FeaturedInitiatives';
 import EcosystemMap from './components/EcosystemMap';
 import Contact from './components/Contact';
 import Chatbot from './components/Chatbot';
 import Publications from './components/Publications';
 import Workshops from './components/Workshops';
 import Recognition from './components/Recognition';
-import Blog from './components/Blog';
+import Certifications from './components/Certifications';
+import Highlights from './components/Highlights';
+import Administrative from './components/Administrative';
 
 function App() {
 
@@ -45,14 +46,15 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Administrative />
         <Expertise />
         <Publications />
+        <Highlights />
         <Impact />
-        <FeaturedInitiatives />
         <Workshops />
         <EcosystemMap />
+        <Certifications />
         <Recognition />
-        <Blog />
         <Contact />
       </main>
 

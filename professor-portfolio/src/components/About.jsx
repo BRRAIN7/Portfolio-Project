@@ -17,7 +17,7 @@ const About = () => {
 
             <div className="about-text-wrapper reveal reveal-delay-1">
               <p className="about-text">
-                With over 25+ years of experience in innovation-led academia, entrepreneurship development, and academia-industry collaboration, Dr. Bhavna Ambudkar is at the forefront of educational transformation.
+                With over 25+ years of experience in innovation-led academia, entrepreneurship development, and academia-industry collaboration, Dr. Bhavna Ambudkar is at the forefront of educational transformation—including curriculum leadership such as introducing Innovation & Entrepreneurship for final-year electronics & telecommunication students at Savitribai Phule Pune University.
               </p>
               <p className="about-text">
                 Her teaching philosophy is deeply centered on human-centered innovation, experimentation, and cultivating an entrepreneurial mindset. By bridging the gap between emerging technologies and design thinking, she empowers students to become creators of solutions rather than mere consumers of information.
